@@ -1,23 +1,26 @@
 <template>
-  <div class="container mv-container">
-    <div class="mt-4">
-      <SearchForm />
-    </div>
-    <div class="mt-5">
-      <h4 class="mb-4">
-        Showing results for <b>{{ searchedKeyword }}</b>
-      </h4>
-      <PageLayout :pageStatus="pageStatus">
-        <div class="mv-page-select">
-          <div v-for="movie in movieList" :key="movie.id">
-            <MovieItemCard
-              :posterSrc="movie.poster_path"
-              :movieTitle="movie.title"
-              :movieReleaseDate="movie.release_date"
-            />
+  <div>
+    <Navbar />
+    <div class="container">
+      <div class="mt-0">
+        <SearchForm />
+      </div>
+      <div class="mt-5">
+        <h4 class="mb-4">
+          Showing results for <b>‘{{ searchedKeyword }}’</b>
+        </h4>
+        <PageLayout :pageStatus="pageStatus">
+          <div class="mv-page-select">
+            <div v-for="movie in movieList" :key="movie.id">
+              <MovieItemCard
+                :posterSrc="movie.poster_path"
+                :movieTitle="movie.title"
+                :movieReleaseDate="movie.release_date"
+              />
+            </div>
           </div>
-        </div>
-      </PageLayout>
+        </PageLayout>
+      </div>
     </div>
   </div>
 </template>
@@ -27,12 +30,14 @@ import axios from "axios";
 import SearchForm from "@/components/SearchForm";
 import MovieItemCard from "@/components/MovieItemCard";
 import PageLayout from "@/components/common/PageLayout";
+import Navbar from "@/components/navs/Navbar";
 
 export default {
   components: {
     SearchForm,
     MovieItemCard,
     PageLayout,
+    Navbar,
   },
   data() {
     return {

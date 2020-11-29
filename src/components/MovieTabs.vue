@@ -57,14 +57,5 @@ export default {
       }
     }
   },
-  // watch: {
-  //   $route(to) {
-  //     if (to.name === "movie-list") {
-  //       this.$router.push({
-  //         path: `${this.$route.fullPath}/${this.tabList[0].path}`,
-  //       });
-  //     }
-  //   },
-  // },
 };
 </script>
