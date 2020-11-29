@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mv-nav-wrapper">
     <b-navbar toggleable="lg" type="light" variant="mv-light">
       <b-navbar-brand class="mv-nav-brand" :to="{ name: 'new-release' }"
         >Cinibuzz</b-navbar-brand
@@ -38,5 +38,10 @@ export default {};
 }
 .bg-mv-light {
   background: #fff;
+}
+.mv-nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 </style>
