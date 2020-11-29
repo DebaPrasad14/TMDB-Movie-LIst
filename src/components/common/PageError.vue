@@ -7,7 +7,7 @@
     </div>
     <div class="text-error">
       <p class="ml-2">
-        Unable to fetch currency details, Please try again later
+        Unable to fetch movie details, Please try again later
       </p>
     </div>
   </div>
@@ -15,8 +15,8 @@
 
 <style scoped>
 .ct-error .icon-error {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-bottom: 15px;
 }
 .ct-error .icon-error img {
