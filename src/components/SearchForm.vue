@@ -18,8 +18,9 @@
           type="text"
           placeholder="Search movies"
           autocomplete="off"
+          @keypress.enter="submit"
         ></b-form-input>
-        <b-button class="mv-button ml-2">SEARCH</b-button>
+        <b-button class="mv-button ml-2" @click="submit">SEARCH</b-button>
       </b-input-group>
     </b-card>
   </div>
@@ -31,6 +32,14 @@ export default {
     return {
       searchItem: "",
     };
+  },
+  methods: {
+    submit() {
+      this.$router.push({
+        name: "search-results",
+        params: { keyword: this.searchItem },
+      });
+    },
   },
 };
 </script>

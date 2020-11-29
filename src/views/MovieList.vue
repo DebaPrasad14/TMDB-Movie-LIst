@@ -19,19 +19,5 @@ export default {
     SearchForm,
     MovieTabs,
   },
-  data() {
-    return {
-      isLoading: false,
-      isError: false,
-    };
-  },
-  methods: {},
 };
 </script>
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
-.mv-container {
-  font-family: "Inter", sans-serif;
-}
-</style>

@@ -62,6 +62,11 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/search-results/:keyword",
+    name: "search-results",
+    component: () => import("@/views/SearchedMovies"),
+  },
 ];
 
 const router = new Router({

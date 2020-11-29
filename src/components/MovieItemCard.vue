@@ -1,10 +1,15 @@
 <template>
   <div>
     <div class="mv-poster">
-      <b-img
-        :src="`//image.tmdb.org/t/p/w220_and_h330_face/${posterSrc}`"
-        alt="poster"
-      />
+      <template v-if="posterSrc">
+        <b-img
+          :src="`//image.tmdb.org/t/p/w220_and_h330_face/${posterSrc}`"
+          alt="poster"
+        />
+      </template>
+      <template v-else>
+        <b-img :src="require('@/assets/noimage.jpeg')" alt="no image" />
+      </template>
     </div>
     <div class="mv-poster-text mt-3">
       <div>
@@ -21,7 +26,6 @@
 export default {
   props: {
     posterSrc: {
-      type: String,
       required: true,
     },
     movieTitle: {
