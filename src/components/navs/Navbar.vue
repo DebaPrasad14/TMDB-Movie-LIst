@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="light" variant="light">
+    <b-navbar toggleable="lg" type="light" variant="mv-light">
       <b-navbar-brand class="mv-nav-brand" :to="{ name: 'new-release' }"
         >Cinibuzz</b-navbar-brand
       >
@@ -35,5 +35,8 @@ export default {};
   font-size: 32px;
   line-height: 57px;
   color: #6855d6 !important;
+}
+.bg-mv-light {
+  background: #fff;
 }
 </style>

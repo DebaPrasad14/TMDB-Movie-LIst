@@ -49,7 +49,9 @@
             <b-col sm="8">
               <div>
                 <p><b>Overview</b></p>
-                <p>{{ movieData.overview }}</p>
+                <p class="font-weight-light text-secondary">
+                  {{ movieData.overview }}
+                </p>
               </div>
               <div>
                 <p><b>Production Companies</b></p>
