@@ -17,8 +17,6 @@ import MovieTabs from "@/components/MovieTabs";
 export default {
   components: {
     SearchForm,
-    // PageError,
-    // Loader,
     MovieTabs,
   },
   data() {

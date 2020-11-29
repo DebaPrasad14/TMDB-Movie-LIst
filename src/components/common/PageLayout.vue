@@ -16,13 +16,6 @@
       </div>
     </template>
     <template v-else-if="pageStatus == 'success'">
-      <!-- <div class="ct-page-select">
-        <MovieItemCard
-          :posterSrc="posterSrc"
-          :movieTitle="movieTitle"
-          :movieReleaseDate="movieReleaseDate"
-        />
-      </div> -->
       <slot></slot>
     </template>
   </div>
@@ -35,18 +28,6 @@ import PageEmpty from "@/components/common/PageEmpty";
 
 export default {
   props: {
-    // posterSrc: {
-    //   type: String,
-    //   required: true,
-    // },
-    // movieTitle: {
-    //   type: String,
-    //   required: true,
-    // },
-    // movieReleaseDate: {
-    //   type: String,
-    //   required: true,
-    // },
     pageStatus: {
       type: String,
       default: "loading",
