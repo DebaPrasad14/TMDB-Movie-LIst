@@ -35,6 +35,7 @@ export default {
   },
   methods: {
     submit() {
+      if (this.searchItem == "") return;
       this.$router.push({
         name: "search-results",
         params: { keyword: this.searchItem },

@@ -50,6 +50,7 @@ export default {
 .mv-poster {
   width: 160px;
   height: 220px;
+  cursor: pointer;
 }
 .mv-poster img {
   height: 100%;
