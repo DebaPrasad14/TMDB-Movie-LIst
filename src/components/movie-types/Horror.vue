@@ -3,11 +3,7 @@
     <PageLayout :pageStatus="pageStatus">
       <div class="mv-page-select">
         <div v-for="movie in movieList" :key="movie.id">
-          <MovieItemCard
-            :posterSrc="movie.poster_path"
-            :movieTitle="movie.title"
-            :movieReleaseDate="movie.release_date"
-          />
+          <MovieItemCard :movieDetails="movie" />
         </div>
       </div>
     </PageLayout>

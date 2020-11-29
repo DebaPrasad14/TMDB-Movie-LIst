@@ -6,6 +6,11 @@ Vue.use(Router);
 const routes = [
   {
     path: "/",
+    name: "home",
+    redirect: { name: "movie-list" },
+  },
+  {
+    path: "/movie",
     name: "movie-list",
     component: () => import("@/views/MovieList"),
     redirect: { name: "new-release" },
@@ -66,6 +71,11 @@ const routes = [
     path: "/search-results/:keyword",
     name: "search-results",
     component: () => import("@/views/SearchedMovies"),
+  },
+  {
+    path: "/movie-details",
+    name: "movie-details",
+    component: () => import("@/views/MovieDetails"),
   },
 ];
 

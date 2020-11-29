@@ -1,9 +1,11 @@
 <template>
   <div>
-    <div class="mv-poster">
-      <template v-if="posterSrc">
+    <div class="mv-poster" @click="goToMovieDetailsPage()">
+      <template v-if="movieDetails.poster_path">
         <b-img
-          :src="`//image.tmdb.org/t/p/w220_and_h330_face/${posterSrc}`"
+          :src="
+            `//image.tmdb.org/t/p/w220_and_h330_face/${movieDetails.poster_path}`
+          "
           alt="poster"
         />
       </template>
@@ -13,10 +15,10 @@
     </div>
     <div class="mv-poster-text mt-3">
       <div>
-        <b>{{ movieTitle }}</b>
+        <b>{{ movieDetails.title }}</b>
       </div>
       <p>
-        <small>{{ movieReleaseDate | formatInMMMDDYYYY }}</small>
+        <small>{{ movieDetails.release_date | formatInMMMDDYYYY }}</small>
       </p>
     </div>
   </div>
@@ -25,16 +27,20 @@
 <script>
 export default {
   props: {
-    posterSrc: {
+    movieDetails: {
+      type: Object,
       required: true,
     },
-    movieTitle: {
-      type: String,
-      required: true,
-    },
-    movieReleaseDate: {
-      type: String,
-      required: true,
+  },
+  methods: {
+    goToMovieDetailsPage() {
+      this.$router.push({
+        name: "movie-details",
+        query: {
+          name: this.movieDetails.title,
+          id: this.movieDetails.id,
+        },
+      });
     },
   },
 };
